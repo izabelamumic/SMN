@@ -1,0 +1,22 @@
+E:\Projeto supermercado\Supermercado Interface\Supermercado\Supermercado\bin\Debug\Supermercado.exe.config
+E:\Projeto supermercado\Supermercado Interface\Supermercado\Supermercado\bin\Debug\Supermercado.exe
+E:\Projeto supermercado\Supermercado Interface\Supermercado\Supermercado\bin\Debug\Supermercado.pdb
+E:\Projeto supermercado\Supermercado Interface\Supermercado\Supermercado\obj\Debug\Supermercado.Interface.resources
+E:\Projeto supermercado\Supermercado Interface\Supermercado\Supermercado\obj\Debug\Supermercado.Properties.Resources.resources
+E:\Projeto supermercado\Supermercado Interface\Supermercado\Supermercado\obj\Debug\Supermercado.csproj.GenerateResource.cache
+E:\Projeto supermercado\Supermercado Interface\Supermercado\Supermercado\obj\Debug\Supermercado.csproj.CoreCompileInputs.cache
+E:\Projeto supermercado\Supermercado Interface\Supermercado\Supermercado\obj\Debug\Supermercado.exe
+E:\Projeto supermercado\Supermercado Interface\Supermercado\Supermercado\obj\Debug\Supermercado.pdb
+E:\Projeto supermercado\Supermercado Interface\Supermercado\Supermercado\obj\Debug\Supermercado.csprojAssemblyReference.cache
+E:\Projeto supermercado\Supermercado Interface\Supermercado\Supermercado\obj\Debug\Supermercado.Compras.resources
+C:\Users\izabela.mumic\Desktop\SMN\Supermercado Interface\Supermercado\Supermercado\bin\Debug\Supermercado.exe.config
+C:\Users\izabela.mumic\Desktop\SMN\Supermercado Interface\Supermercado\Supermercado\bin\Debug\Supermercado.exe
+C:\Users\izabela.mumic\Desktop\SMN\Supermercado Interface\Supermercado\Supermercado\bin\Debug\Supermercado.pdb
+C:\Users\izabela.mumic\Desktop\SMN\Supermercado Interface\Supermercado\Supermercado\obj\Debug\Supermercado.csprojAssemblyReference.cache
+C:\Users\izabela.mumic\Desktop\SMN\Supermercado Interface\Supermercado\Supermercado\obj\Debug\Supermercado.Compras.resources
+C:\Users\izabela.mumic\Desktop\SMN\Supermercado Interface\Supermercado\Supermercado\obj\Debug\Supermercado.Interface.resources
+C:\Users\izabela.mumic\Desktop\SMN\Supermercado Interface\Supermercado\Supermercado\obj\Debug\Supermercado.Properties.Resources.resources
+C:\Users\izabela.mumic\Desktop\SMN\Supermercado Interface\Supermercado\Supermercado\obj\Debug\Supermercado.csproj.GenerateResource.cache
+C:\Users\izabela.mumic\Desktop\SMN\Supermercado Interface\Supermercado\Supermercado\obj\Debug\Supermercado.csproj.CoreCompileInputs.cache
+C:\Users\izabela.mumic\Desktop\SMN\Supermercado Interface\Supermercado\Supermercado\obj\Debug\Supermercado.exe
+C:\Users\izabela.mumic\Desktop\SMN\Supermercado Interface\Supermercado\Supermercado\obj\Debug\Supermercado.pdb

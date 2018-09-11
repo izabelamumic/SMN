@@ -1,0 +1,20 @@
+<script>
+    /*
+        As maçãs custam R$ 0,30 cada se forem compradas 
+		menos do que uma dúzia, e R$ 0,25 se forem compradas
+		pelo menos doze. Escreva um programa que leia o 
+		número de maçãs compradas, calcule e escreva o valor
+		total da compra.
+    */
+    var maca;
+
+    maca = prompt("Digite o numero de macas compradas: ");
+
+    if (maca < 12) {
+        total = maca * 0.30;
+    }else{
+        total = maca * 0.25;
+    }
+    console.log("Total: R$", total);
+
+</script>

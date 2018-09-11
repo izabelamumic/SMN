@@ -1,0 +1,28 @@
+<script>
+	/*
+		
+	*/
+    
+    var contador = 1;
+    var matriz1 = [];
+    var matriz2 = [];
+    var matrizSoma = [];
+    for(var i = 0; i < 3; i++){
+        matriz1[i] = [];
+        matriz2[i] = [];
+        matrizSoma[i] = [];
+        for(var j = 0; j < 3; j++){
+            matriz1[i][j] = contador;
+            matriz2[i][j] = contador;
+            matrizSoma[i][j] = matriz1[i][j] + matriz2[i][j];
+            contador++;
+        }
+    }
+    
+	console.log(matriz1);
+    console.log(matriz2);
+    console.log(matrizSoma);
+	
+	
+    
+</script>

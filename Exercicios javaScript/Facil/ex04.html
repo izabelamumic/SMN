@@ -1,0 +1,110 @@
+<script>
+	/*
+		Escreva um programa que converta diversos tipos
+		de moedas, primeiramente o usuário deve fornecer
+		o valor e informar qual a moeda e por último 
+		escolher para qual moeda deseja fazer a conversão,
+		os tipos de moedas são dólar americano, euro, 
+		iene japonês, libra esterlina, peso argentino. 
+		(para fazer as conversões, utilizem valores atuais,
+		procurem na internet)
+	*/
+    var valor, tpMoeda, conversao;
+
+    valor = prompt("Digite a valor: ");
+    tpMoeda = prompt("Digite o tipo de moeda: ");
+    conversao = prompt("Digite a moeda para conversao: ");
+
+    if(tpMoeda == "dolar"){
+        if(conversao == "euro"){
+            vlrconversao = valor * 0.86;
+            console.log(valor + " dolar é igual a " + vlrconversao + " euro");
+        }
+        else if (conversao == "iene"){
+            vlrconversao = valor * 111.11;
+            console.log(valor + " dolar é igual a " + vlrconversao + " iene");
+        }
+        else if (conversao == "libra"){
+            vlrconversao = valor * 0.78;
+            console.log(valor + " dolar é igual a " + vlrconversao + " libra");
+        }
+        else if (conversao == "peso"){
+            vlrconversao = valor * 30.75;
+            console.log(valor + " dolar é igual a " + vlrconversao + " peso ");
+        }
+    }
+    else if(tpMoeda == "euro"){
+        if(conversao == "dolar"){
+            vlrconversao = valor * 0.86;
+            console.log(valor + " euro é igual a " + vlrconversao + " dolar");
+        }
+        else if(conversao == "iene"){
+            vlrconversao = valor * 129.75;
+            console.log(valor + " euro é igual a " + vlrconversao + " iene");
+        }
+        else if(conversao == "libra"){
+            vlrconversao = valor * 0.91;
+            console.log(valor + " euro é igual a " + vlrconversao + " libra");
+        }
+        else if(conversao == "peso"){
+            vlrconversao = valor * 36.13;
+            console.log(valor + " euro é igual a " + vlrconversao + " peso");
+        }
+    }
+    else if(tpMoeda == "iene"){
+        if(conversao == "dolar"){
+            vlrconversao = valor * 111.11;
+            console.log(valor + " iene é igual a " + vlrconversao + " dolar");
+        }
+        else if(conversao == "euro"){
+            vlrconversao = valor * 129.75;
+            console.log(valor + " iene é igual a " + vlrconversao + " euro");
+        }
+        else if(conversao == "libra"){
+            vlrconversao = valor * 0.0070;
+            console.log(valor + " iene é igual a " + vlrconversao + " libra");
+        }
+        else if(conversao == "peso"){
+            vlrconversao = valor * 0.28;
+            console.log(valor + " iene é igual a " + vlrconversao + " peso");
+        }
+
+    }
+    else if(tpMoeda == "libra"){
+        if (conversao == "dolar"){
+            vlrconversao = valor * 0.78;
+            console.log(valor + " libra é igual a " + vlrconversao + " dolar");
+        }
+        else if(conversao == "euro"){
+            vlrconversao = valor * 0.91;
+            console.log(valor + " libra é igual a " + vlrconversao + " euro");
+        }
+        else if(conversao == "iene"){
+            vlrconversao = valor * 0.0070;
+            console.log(valor + " libra é igual a " + vlrconversao + " iene");
+        }
+        else if(conversao == "peso"){
+            vlrconversao = valor * 39.90;
+            console.log(valor + " libra é igual a " + vlrconversao + " peso");
+        }
+    }
+    else if(tpMoeda == "peso"){
+        if (conversao == "dolar"){
+            vlrconversao = valor * 30.75;
+            console.log(valor + " peso é igual a " + vlrconversao + " dolar");
+        }
+        else if(conversao == "euro"){
+            vlrconversao = valor * 36.13;
+            console.log(valor + " peso é igual a " + vlrconversao + " euro");
+        }
+        else if(conversao == "iene"){
+            vlrconversao = valor * 0.28;
+            console.log(valor + " peso é igual a " + vlrconversao + " iene");
+        }
+        else if(conversao == "libra"){
+            vlrconversao = valor * 39.90;
+            console.log(valor + " peso é igual a " + vlrconversao + " libra");
+        }
+    }
+    
+</script>

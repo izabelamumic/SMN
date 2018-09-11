@@ -1,0 +1,37 @@
+<script>
+
+    /*
+    
+    */
+
+    var n1,n2;
+
+    n1 = parseInt(prompt("Informe o numero 1: "));
+    n2 = parseInt(prompt("Informe o numero 2: "));
+
+    num1 = n1
+    num2 = n2
+
+    if(n1 > n2){
+        resto = n1 % n2
+    }else{
+        resto = n2 % n1;
+    }
+
+    while(resto != 0){
+        n1 = n2;
+        n2 = resto;
+        resto = n1 % n2;
+    }
+
+    mdc = n2
+    console.log("MDC: ", mdc);
+    
+
+     
+   //MMC
+
+   mmc = (num1 * num2) / mdc
+   console.log("MMC: ", mmc);
+
+</script>

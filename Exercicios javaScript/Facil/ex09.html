@@ -1,0 +1,29 @@
+<script>
+	/*
+		Escreva um programa que recebe como entrada 
+		um número inteiro e faça a contagem regressiva
+		desse número até 0, quando terminar exiba:
+		“Acabou o Tempo”.
+	*/
+    
+	var num;
+	
+	// function sleep(milliseconds) {
+	// 	var start = new Date().getTime();
+	// 	for (var i = 0; i < 1e7; i++) {
+	// 		if ((new Date().getTime() - start) > milliseconds){
+	// 	  	break;
+	// 	}
+	//   }
+	// }
+	
+	num = parseInt(prompt("Digite um numero: "));
+	for(i=num; i>0; i--){
+		console.log(i, " segundos  ");
+		//sleep(1000);
+	}
+	
+	console.log("Acabou o tempo");
+	
+    
+</script>

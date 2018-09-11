@@ -1,0 +1,31 @@
+<script>
+	/*
+		Escreva um programa que receberá como entrada um vetor de valores e terá de mostrar 
+		o maior e o menor número.
+	*/
+    var vetor = [6,3,7,8,55,2,1,0];
+    
+	var maior = 0;
+	var menor = vetor[0];
+	
+
+	for(var i=0; i<vetor.length; i++){
+		if (menor > vetor[i] ){
+			menor = vetor[i];
+		}
+
+		if (maior < vetor[i]){
+			maior = vetor[i];
+		}
+	}
+	console.log("Menor: ", menor, " Maior: ", maior);
+
+	// var vetor = [6,3,7,8,515,2,1,0];
+	// var ordena = vetor.sort();
+
+	// console.log(ordena);
+	// console.log(" Menor: ",ordena[0]);
+	// console.log(" Maior: ",ordena[ordena.length-1]);
+	
+    
+</script>

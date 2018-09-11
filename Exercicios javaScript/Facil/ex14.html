@@ -1,0 +1,33 @@
+<script>
+	/*
+		Faça um algoritmo que leia um conjunto de 
+		números e imprima a quantidade de números pares
+		e a quantidade de números impares
+	*/
+    
+	var num = [1,23,36,432,53,65];
+	par = "";
+	impar = "";
+	for(i = 0; i <= num.length; i++){
+		if (num[i] % 2 == 0){
+			if (par == ""){
+				par = num[i];
+			}else{
+				par = par + ", " + num[i];
+			}
+		}
+		else{
+			if (impar == ""){
+				impar = num[i];
+			}else{
+				impar = impar + ", " + num[i];
+			}
+		}
+	}
+	
+	
+	document.write("Par: ", par, " Impar: ", impar);
+	
+	
+    
+</script>
