@@ -1,0 +1,26 @@
+- Analista de negocio - André e Castanha
+
+- Engenharia de Requisitos:
+	- Delimitar requisitos
+		- 
+
+	- Elicitar requisitos
+		- Coração do sistema
+		- Pegar o máximo de informações
+		- Não ter vergonha de perguntar, porém não ser o analista chato que faz perguntas bobas
+
+	- Documentação de Requisitos e suas funcionalidades
+		- Linguagem formal
+	
+	- Documentar requisitos usando modelos
+		- Diagramas
+
+	- Validar e acordar requisitos
+		- Ter jogo de cintura
+		- Conversar com todos que usará o aplicativo
+	
+	- Gerenciar Requisitos
+		- Cliente não fala tudo que precisa
+		- Analista mostra tudo que o cliente precisa
+		- Ter sempre certeza, nunca ACHAR
+		- Sempre conversar com o cliente e ter argumentos ante de faze qualquer alteração

@@ -1,0 +1,102 @@
+ ---------------------------------------
+|	  GIT - Rafael Pessoni  	|
+ ---------------------------------------
+
+github - servidor
+
+- criar um repositorio (pasta em nuvem)
+	- repositorio - new
+	- repository name
+	- discription
+	- public
+	- initialize
+	- create repository
+
+- vai na pasta que criou do git, botao direito git bash
+
+- clonar um repositório
+	- git clone URL DO GIT
+
+- verificar se o arquivo que esta no pc está igual ao do git
+	- git status
+
+- pega arquivos que alterou no pc e manda para o git
+	- git add --all (adiciona todos que foram modificados)
+	- git add --nome do arquivo (adiciona o arquivo tal que foi modificado)
+	
+- voltar o que foi feito (ctrl z)
+	- git reset head
+
+- colocar uma mensagem para dizer qual alteração foi feita
+	- git commit -m 'digite a mensagem'
+
+- envia as alterações locais para a origin
+	- git push
+
+- atualiza o repositório local
+	- git pull
+
+- busca as alterações na origin
+	- git fetch
+
+- alterar no nome do arquivo
+	- mv (nome arquivo).(extensão do arquivo) (novo nome).(extensão do arquivo)
+
+- branch
+	- linha de desenvolvimento que permite isolar o código de uma nova funcionalidade mantendo
+	  a linha base estável, evitando o represamento de código
+	- git branch (nome)
+
+- mostra informações completas
+	- git log
+
+- mostra informações apena em uma linha
+	- git --oneline
+
+- mostra o branch que estou
+	- git --decorate
+
+- mostra o caminho do head
+	- cat .git/HEAD
+
+- mostra tudo
+	- git log --oneline -- decorate --all
+
+- cria e troca um branch
+	- git checkout -b (nome)
+- troca dos branches
+	- git checkout feature1
+
+- merge
+	- junta as branches
+	- git merge feature1
+
+- fast-forward
+	- apenas uma atualização da referência e só é possível quando não existe diverg~encia entre
+	  os branches
+
+- apagar feature1 localmente
+	- git branch -d feature1
+
+- apagar feature1 do origin
+git push <nome do origin> <nome do branch> --delete
+
+- stash
+	- armazena códigos sem a necessidade de realizar o commit, permitindo 
+	  mudar de branch ou realizar outras operações de forma organizada
+
+- criar um novo branch atraves do stash salvo
+	- git stash branch feature5
+
+- salva sem dar commit
+	- git stash save (nome e extensao do arquivo)
+
+- lista os arquivos salvos
+	- git stash list
+
+- volta o arquivo que saltou anteriormente
+	- git stash apply stash@{0}
+
+- apaga o arquivo que saltou anteriormente
+	- git stash drop stash@{0}
+	- git stash pop

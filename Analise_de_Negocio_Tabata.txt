@@ -1,0 +1,29 @@
+- Analista de negocio - Tabata
+	* Verifica problema
+	* Faz a documentação 
+	* Manda para cliente autorizar
+	* Passa para desenvolver
+	* Volta para analista testar
+	* Faz teste com a empresa.
+- Método cascata
+	* Faz toda documentação
+	* Manda para autorização
+	* Entrega apenas no final do projeto
+obs: caso esqueça alguma coisa, não pode alterar o preço e tempo passado para o cliente.
+	assim, a documentação e analise tem que ser muito bem feita no começo do projeto
+
+- Método scrum
+	* Faz uma parte do projeto e manda para cliente testar
+	* Faz outra parte e manda para cliente testar e assim por diante.
+
+- Gerenciamento de projeto
+	1º - Definir projeto (pessoas envolvidas)
+	2º - Requisitos
+	3º - Cronograma (utiliza o project para fazer o cronograma)
+	4º - Custo do projeto.
+	5º - Gerecenciamento da qualidade do projeto (fazer o algo a mais para o cliente)
+	6º - Gerenciamento de Recursos Humanos (levantamento de quais pessoas irá usar o projeto e quais suas necessidades)
+	7º - Gerenciamento da comunicação (conversar com o cliente e entender perfeitamente o que tem que ser feito)
+	8º - Gerenciamento de riscos do projeto (mudança de requisito, mudança de lei)
+	9º - Gerenciamento das aquisições do projeto (saber conversar com empresas que prestam serviço para a mesma empresa)
+	10º - Gerenciamento das partes interessadas (manter contato com quem pediu o projeto e com quem vai pagar o projeto)

@@ -1,0 +1,35 @@
+ ---------------------------------------
+|	 LEAN Startup - Vinicius	|
+ ---------------------------------------
+"Eu gosto do impossível porque lá a concorrência é menor" - Walt Disney
+
+- Startup Enxuta
+	- Eliminar desperdícios
+	- Fazer o necessário
+
+- Como aplicar
+	- Modelo de Negócios (canvas)
+	- Desenvolvimento com clientes
+	- Desenvolvimento ágil
+
+- Premissas básicas
+	- Hipóteses
+	- Validações
+	- Aprendizado
+ 	- ciclo = ideias -> build -> product -> measure -> data -> learn (depois volta nas ideias)
+
+-MVP
+	- Produto mínimo utilizável
+	- O que gera valor
+	- O item principal
+
+- Como utilizar?
+	- Fatores básico de satisfação. (cliente não falou mais precisa)
+	- Fatores esperados de satisfação. (foi entregue tudo que o cliente pediu)
+	- Fatores inespeados de satisfação. (surpreender cliente)
+		- pediu tela de endereço, e voce fez buscando pelo cep para ficar mais rápido
+
+- Lei de Pareto
+	- 80/20
+		- 80% de resultado
+		- 20% de esforço

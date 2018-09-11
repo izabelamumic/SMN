@@ -1,0 +1,126 @@
+ -----------------------------------------------
+|	 Metodologia ágil - Scrum - Rafa	|
+ -----------------------------------------------
+
+certificação - PSPO - scrum.org
+- Metodologia tradicional
+	- Objetivo
+		- orientado por atividade e focada no processo
+	- Tamanho
+		- mais efetivos em projetos de maior duração
+	- Tipo de projeto
+		- estáveis e com baixo nível de mudanças
+	- Gerente de projeto
+		- controle total do projeto
+	- Cliente
+		- paticipa da fases iniciais dos requisitos e das avaliações dos produtos
+	- Equipe de projeto
+		- atuação com papeis claros e bem definidos
+	- Planejamento
+		- detalhado e os envolvidos tem o mpapel de validação, não participa da elaboração do planejamento
+	- Modelo de cascata
+		- planeja tudo com o maior cuidado e depois é muito difícil alterar o sistema
+
+- Metodologia Ágil
+	- Objetivo
+		- orientado por produto e centrado em pessoas
+	- Tamanho
+		- mais efetivos em projetos pequenos, porem sem restrições em ser implementado em projetos de maior porte
+	- Tipo de projeto
+		- projetos com mudanças constantes e que necessita de respostas rápidas
+	- Gerente de projeto
+		- papel de facilitador ou coordenador
+	- Cliente
+		- essencial. Deve ser parte integrante da equipe do projeto
+	- Equipe de projeto
+		- atuação colaborativa
+	- Planejamento
+		- curto e com a particupação de todos os envolvidos na elaboração do planejamento
+	- Scrum
+		- Pode modificar a qualquer momento o sistema.
+
+- Conceito
+	- Satisfação do cliente
+	- Mudanças são bem vindas
+	- Entrega periódica de funcionalidades
+	- Todos juntos
+	- Indivíduos motivados
+	- Conversas face a face
+	- Medida primária é o software trabalhando
+	- Manter um ritmo constante sempre
+	- Atenção contínua, excelência técnica e bom projeto
+	- Simplicidade
+	- Equipes auto organizáveis ou auto gerenciáveis
+	- Reflexão de melhoria regularmente.
+	
+- Scrum
+	- Framework simples para o gerenciamento de projetos e desenvolvimento de software complexos.
+	- Controla processos empíricos mantendo o foco na entrega de valor de um negócio no menor tempo possível.
+	- Pilares:
+		- inspeção
+			- garantir a qualidade do que esta entregando para o cliente.
+		- adaptação
+			- adaptar o sistema conforme o cliente precise.
+		- transparência
+			- time inteiro trabalhando de forma clara e objetiva. Cliente sempre fica sabendo como está 
+			  indo o sistema
+
+- Papeis do Scrum:
+	- Product Owner (Dono do produto)
+		- Maximiza o valor do produto e do trabalho em equipe.
+		- Priorizar o backlog.
+		- Representante do cliente.
+		- Conhecer o projeto e o negocio.
+		- Garantir o retorno sobre o investimento (ROI).
+		- Compartilha visão com o time.
+	- Scrum Master (Líder do produto)
+		- Responsável por fazer acontecer o Scrum.
+		- Atua como líder.
+		- Auxilia na remoção de impedimentos.
+		- Melhora a qualidade e produtividade dos processos.
+		- Evita interferência externa ao time de desenvolvimento.
+		- Fortalece o trabalho em equipe.	
+		- Mediador entre as partes.
+	- Scrum Team (Time de desenvolvimento)
+		- Transforma requisitos em incrementos de software.
+		- Auto organizado.
+		- Multifuncional.
+		- Todos são responsáveis por cada iteração do projeto.
+		- Grupo de 3 a 9 pessoas.
+		- Possui habilidades para atingir o objetivo do projeto.
+
+- Planejamento da Sprint
+	- timebox de 8 horas de duração para sprint de 1 mes.
+	- Reunião que prioriza o backlog da sprint.
+	- Dividida em duas partes:
+		- Parte I - "O que fazer?" - Time de desenvolvimento e dono do produto priorizam o BACKLOG DO PRODUTO.
+		- Parte II - "Como fazer?" - Apenas o time de desenvolviemnto. É definido o plano (PRONTO) para o Srpint.
+	- Estabelece objetivos e metas para a SPRINT
+
+- SPRINT
+	- Duração de 1 mês ou menos (2 ou 4 semanas)
+	- Transforma Backlog do produto em incremento de software.
+	- Apenas o dono do produto pode cancelar.
+	- Apenas o time de desenvolvimento pode realizar estimativas.
+
+- DAILY
+	- Reunião diaária de 15 minutos.
+	- Sincronizar as informações e atividades enter os membros do time.
+	- Discutir sobre os problemas.
+	- Permitir inspeção e adaptação.
+	- 3 perguntas:
+		- O que fiz ontem?
+		- O que vou fazer hoje?
+		- Há algum impedimento no meu trabalho?
+
+- Revisão de SPRINT
+	- Timebox de 4 horas.
+	- Inspeciona o incremento produzido e o que não foi durante a sprint.
+	- Clientes participam junto com o time scrum.
+	- Feedback para novas mudanças.
+
+- Retrospectiva SPRINT
+	- Todos os menbros da equipe reflete sobre sprint passada.
+	- Avalia o processo de trabalho de uma sprint.
+	- Promove soluções para melhoria nos processos.
+
