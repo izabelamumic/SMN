@@ -1,0 +1,78 @@
+SQL e SQL SERVER
+- Grupos de comando
+	- DDL - Data Definition Language
+		- Create
+		- Alter
+		- Drop
+
+	- DML - Data Manipulation Language
+		- Insert
+		- Update
+		- Delete
+
+	- DCL - Data Control Language
+		- Grant
+			- Dá privilégios a um usuário
+		- Revoke
+			- Retira privilégios fornecidos a um usuário.
+
+	- DQL - Data Query Language
+		- Select
+
+- SGBDR ou SBBD
+	- Sistema Gerenciador de Banco de Dados Relacional
+	- Banco de Dados Relacional (BDR):
+		- Tabelas
+			- objetos onde são armazenados os dados em um BDR 
+			- coleção de entrada de dados relacionados e consiste em linhas e colunas
+		- Campos (colunas)
+			- entidades que representam os atributos dos dados, como nome, data de nascimento, etc
+			- mantem informações específicas sobre cada um dos registros.
+		- Registros (linhas)
+			- Linha ou tuplas
+			- cada entrada individual em uma tabela. Trata-se de um conjunto de campos relacionados
+			  que caracterizam os dados de uma entidade.
+
+- Tipos de Dados
+	- char
+		- string de caracteres de tamanho fixo, max de 8000 caracteres
+	- varchar
+		- string de caracteres de tamanho variável, max de 8000 caracteres
+	- nchar
+		- Dados Unicode de tamanho fixo, máximo de 4000 caracteres
+	- nvarchar
+		- Dados Unicode de tamanho variável, máximo de 4000 caracteres
+	- bit
+		- 0,1 ou nulo
+	- tinyint
+		- números inteiros entre 0 a 255
+		- armazenamento de 1 bytes
+	- smallint
+		- números inteiros de -32768 a 32767
+		- armazenamento de 2 bytes
+	- int 	
+		- números inteiros entre -2,147,483,648 e 2,147,483,647
+		- armazenamento de 4 bytes
+	- bigint
+		- números inteiros entre -9,223,372,036,854,775,808 e 9,223,372,036,854,775,807
+		- armazenamento de 8 bytes
+	- real	
+		- números de ponto flutuante entre -3.4 * 10 ^ 38 e -3.4 * 10 ^ 38
+		- armazenamento de 4 bytes
+	- datetime
+		- De 01/01/1753 a 31/12/9999, com um aprecisão de 3,33 milisegundos
+		- armazenamento de 8 bytes
+	- smalldatetime
+		- De 01/01/1900 a 06/06/20179, com uma precisão de 1 minuto
+		- armazenamento de 4 bytes
+	- date
+		- Data apenas. De 01/01/0001 a 31/12/999
+		- armazenamento de 5 bytes
+	- time
+		- Hora apenas. Precisão de até 100 nanossegundos 
+		- armazenamento de 3-5 bytes
+	- text
+		- Cadeia de caracteres de tamanho variável. Até 2GB de dados.
+	- money
+		- Dados monetários de -922,337,203,685,477,5808 até 922,337,203,685,477,5807
+		- armazenamento de 8 bytes

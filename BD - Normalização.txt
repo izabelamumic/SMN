@@ -1,0 +1,13 @@
+Banco de Dados - Formas Normais
+- Primeira Forma Normal
+	- Somente possui valores atômicos
+		- valores indivisíveis
+	- obs: valor não atômico
+		- podem ser dubdivididos em mais de um campo, como o endereço.
+	- Não há grupos de atributos repetidos (há apenas um dado pro coluna)
+	- Existem uma chave primária
+	- Relação não possui atributos multivalorados ou relações aninhadas
+	- Ex:	
+		- um campo endereço possui subdominíos Rua, Numero  e CEP. Esses itens
+		  devem ser separados no processo e normalização.
+		- cada informação deve ser colocada em um campo diferente.
