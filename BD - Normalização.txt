@@ -1,5 +1,6 @@
 Banco de Dados - Formas Normais
 - Primeira Forma Normal
+	- Separar os dados iguais da tabela, expandindo-a.
 	- Somente possui valores atômicos
 		- valores indivisíveis
 	- obs: valor não atômico
@@ -11,3 +12,43 @@ Banco de Dados - Formas Normais
 		- um campo endereço possui subdominíos Rua, Numero  e CEP. Esses itens
 		  devem ser separados no processo e normalização.
 		- cada informação deve ser colocada em um campo diferente.
+
+- Segunda Forma Normal
+	- Baseada no conceito de Dependência Funcional Total.
+	- Um esquema de relação R estpa na 2FN se cada atributo não chave de R for
+	   total e funcionalmente dependente da PK de R.
+	- Para testar a 2FN, testamos as DF cujos atributos fazem parte da chave primária
+	- Caso a PK tenha um único atributo, esse teste não precisa ser aplicado.
+	- Uma tabela está na 2FN se:
+		- Está na 1FN
+		- Todos os atributos não-chave são funcionalmente dependentes de todas as
+		  partes da PK
+		- Não existem dependências parciais, caso contrário deve gerar uma 
+		  nova tabela com os dados
+		- Um atributo-chave é uma PK ou parte de uma PK composta.
+		- Deve-se criar uma nova relação para cada chave PK ou combinação de atributos
+		  que forem determinantes em uma dependência funcional.
+		- Este atributo será PK na nova tabela.
+		- Mova os atributos não-chave dependentes desta PK para a nova tabela.
+
+-Terceiro Forma Normal
+	- Baseada no conceito de Dependência Transitiva.
+	- A relação não deve ter um atributo não-chave determinado funcionalmente
+	  por outro atributo não-chave (ou conjunto)
+	- Não deve haver dependência transitiva de um atributo não-chave sobre a PK, quando
+	  isso ocorrer, deve-se decompor e montar um anova relação que inclua os atributos
+	  não-chave que determinam funcionalmente outros atributos não-chave.
+	- Uma tabela está na 3FN se:
+		- Estiver na 2FN
+		- Não existirem dependências transitivas.
+		- Uma tabela está na 3FN se ela estiver na 2FN e se nenhuma não-chave
+		  depender de outra colun anão chave
+		- Uma dependência transitiva em uma tabela é uma dependência funcional
+		  enter dois ou mais atributos não-chave.
+		- Para cada atributo (ou grupo) não-chave que for um determinante na
+	 	  relação, cria uma nova tabela.
+		- Esse atributo será a PK na nova relação.
+		- Mova então todos os atributos que são dependentes funcionalmente do
+		  atributo chave para a nova tabela.
+		- O atributo (PK na nova relação) fica também na tabela original, e
+		  servirá como uma chave estrangeira para associar as duas relações.
