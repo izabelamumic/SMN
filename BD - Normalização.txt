@@ -31,7 +31,7 @@ Banco de Dados - Formas Normais
 		- Este atributo será PK na nova tabela.
 		- Mova os atributos não-chave dependentes desta PK para a nova tabela.
 
--Terceiro Forma Normal
+-Terceira Forma Normal
 	- Baseada no conceito de Dependência Transitiva.
 	- A relação não deve ter um atributo não-chave determinado funcionalmente
 	  por outro atributo não-chave (ou conjunto)
