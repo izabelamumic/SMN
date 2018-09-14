@@ -76,3 +76,57 @@ SQL e SQL SERVER
 	- money
 		- Dados monetários de -922,337,203,685,477,5808 até 922,337,203,685,477,5807
 		- armazenamento de 8 bytes
+
+- ORDER BY
+	- mostra resultado ordenado a partir de uma coluna
+		- asc
+			- ascendente
+		- desc
+			- descendente
+
+- mostrar apenas valores diferentes	
+	- select distinct
+
+- mostrar na tabela livro apenas autores com id 2
+	- select * from tbl_Livro where id_autor = '2'
+
+- and
+	- quando condições foi verdadeiras
+- or
+ 	- quando pelo menos uma condição for verdadeiras
+
+- top
+	- especificar o numero de registros a retornar
+
+-indices
+	- permite que as aplicações de BD encontrem os dados mais rapidamente, sem ter que ler toda tabela
+	- os usuários não vêem os índices
+	- apenas crie índices em tabelas que recebam muitas colunas
+	- tabelas idexadas levam mais tempo apra serem atualizadas
+
+-with ties
+	- tem sempre que ordenar primeiro, para depois usar o with ties
+	- mostra todos os 3 primeiros times de acordo com os pontos, o with ties mostra ate os que estão
+	   com os pontos iguais
+	-select top(3)  with ties nomeTime, Pontos
+		from  tbl_Times
+		order by Pontos desc
+
+- triggers
+	- é um tipo especial de stored procedure que é executada automaticamente quando um usuário realiza
+	  uma operação de modificação de dados em uma tabela especificada
+		- insert
+		- update
+		- delete
+	- nome_trigger = Nome do trigger
+	- tabela = tabela ou vier, onde será executado o trigger
+	- after = o trigger é disparado quando todas as operações especificadas nas declarações do sql
+	  tiverem sido executada com sucesso
+	- instead of = o trigger é disparado no lugar das declarações do sql
+	- delete, update, insert = definem quais são os tipos de modificações na tabela especificada ativaram o trigger.
+	- alinhamento de triggers
+		- ao ser disparado um tiggers dispara outro tiggers
+	- gatilho recursivo	
+		- é um tipo especial de trigger after aninhado.
+		- ocorre quando um trigger executa uma declaração DML, que dispara novamente.
+		- pode ser habilitado ou desabilitado
