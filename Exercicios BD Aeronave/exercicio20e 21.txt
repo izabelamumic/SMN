@@ -1,0 +1,13 @@
+20 - Levantar o primeiro acidente de cada mês de 2018 - Ocorrências de SP.
+	- colocar data do primerio acidente de cada mes
+
+21 - Levantar o primeiro incidente de cada hora do dia que houve mais incidente.
+ex. verificou qual dia ocorreu mais incidente, com base nesse dia, mostra cada hora
+e a quantidade de incidentes
+data e hora 		- 		quantidade
+20/03/2017 - 0h				10
+1
+2
+3
+...
+20/03/2017 - 23h

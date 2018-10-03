@@ -9,18 +9,41 @@
 SELECT	oco.ocorrencia_uf,
 		MIN(
 				CASE 
-					WHEN oco.ocorrencia_classificacao = oco.ocorrencia_classificacao
+					WHEN oco.ocorrencia_classificacao = 'Acidente'
 						THEN oco.ocorrencia_dia
 				END
-				) AS 'Primeira Ocorrência',
+				) AS 'PrimeiraOcorrenciaAcidente',
 		MAX(	
 				CASE 
-					WHEN oco.ocorrencia_classificacao = oco.ocorrencia_classificacao
+					WHEN oco.ocorrencia_classificacao = 'Acidente'
 						THEN oco.ocorrencia_dia
 				END
-				) AS 'Última Ocorrência'
+				) AS 'UltimaOcorrenciaAcidente',
+		MIN(
+				CASE 
+					WHEN oco.ocorrencia_classificacao = 'Incidente'
+						THEN oco.ocorrencia_dia
+				END
+				) AS 'PrimeiraOcorrenciaIncidente',
+		MAX(	
+				CASE 
+					WHEN oco.ocorrencia_classificacao = 'Incidente'
+						THEN oco.ocorrencia_dia
+				END
+				) AS 'UltimaOcorrenciaIncidente',
+		MIN(
+				CASE 
+					WHEN oco.ocorrencia_classificacao = 'Incidente Grave'
+						THEN oco.ocorrencia_dia
+				END
+				) AS 'PrimeiraOcorrenciaIncidenteGrave',
+		MAX(	
+				CASE 
+					WHEN oco.ocorrencia_classificacao = 'Incidente Grave'
+						THEN oco.ocorrencia_dia
+				END
+				) AS 'UltimaOcorrenciaIncidenteGrave'
 	FROM oco WITH(NOLOCK)
-	WHERE oco.ocorrencia_uf <> ' '
 	GROUP BY oco.ocorrencia_uf
 	ORDER BY oco.ocorrencia_uf
 

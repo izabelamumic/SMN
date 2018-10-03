@@ -11,7 +11,7 @@ SELECT	Ano,
 			FROM oco WITH(NOLOCK)
 			INNER JOIN anv aer WITH(NOLOCK)
 				ON oco.codigo_ocorrencia = aer.codigo_ocorrencia
-				WHERE oco.ocorrencia_uf = 'RO'
+				WHERE oco.ocorrencia_uf = 'SP'
 			GROUP BY oco.ocorrencia_uf, aer.aeronave_registro_segmento, DATEPART(YEAR, (CONVERT(DATETIME, oco.ocorrencia_dia))) 
 			)aux
 	PIVOT( SUM(aux.conta)
