@@ -26,3 +26,21 @@ SELECT  CONCAT(dia.Dia, '  -  ', ocorrencia.hora, 'h') AS Data_Hora,
 
 	ORDER BY hora
 
+-- CTE
+WITH cte_table AS (
+	SELECT	top(1)	oco.ocorrencia_dia as Dia,
+						COUNT(oco.codigo_ocorrencia) AS quantidade
+			FROM oco WITH(NOLOCK)
+			WHERE oco.ocorrencia_classificacao = 'INCIDENTE'
+			GROUP BY oco.ocorrencia_dia
+			ORDER BY quantidade desc
+		) 		
+		
+	SELECT	CONCAT(oco.ocorrencia_dia, '   -   ', DATEPART(HOUR,oco.ocorrencia_horario), 'H') AS dia_hora,
+			COUNT(DATEPART(HOUR,oco.ocorrencia_horario)) AS qtd_hora,
+			oco.ocorrencia_tipo		
+		FROM oco with(nolock)
+		INNER JOIN  cte_table
+			ON oco.ocorrencia_dia = cte_table.dia 
+		WHERE oco.ocorrencia_classificacao = 'INCIDENTE'
+		GROUP BY  oco.ocorrencia_dia, DATEPART(HOUR,oco.ocorrencia_horario), oco.ocorrencia_tipo
