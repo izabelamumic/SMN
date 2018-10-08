@@ -80,7 +80,7 @@ INSERT INTO #tbTemp(Ano, Janeiro, Fevereiro, Março, Abril, Maio, Junho,
 					)  AS Outubro,
 			COUNT(
 					CASE 
-						WHEN MONTH(CONVERT(DATETIME, oco.ocorrencia_dia)) = @qtdLinha
+						WHEN MONTH(CONVERT(DATETIME, oco.ocorrencia_dia)) = 11
 							THEN 1
 					END 
 					)  AS Novembro,
