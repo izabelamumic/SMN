@@ -1,3 +1,6 @@
+/*
+	19 - Levantar Fabricantes e a Primeira e Última Ocorrência.
+*/
 SELECT	maxmin.aeronave_fabricante,
 		maxmin.PrimeiraDiaOcorrencia,
 		primeiro.aeronave_tipo_veiculo,

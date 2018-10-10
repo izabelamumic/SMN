@@ -14,24 +14,14 @@
 SELECT oco.codigo_ocorrencia,
 	SUBSTRING(detalhes,1,LEN(detalhes) - 1) AS Detalhe
 	FROM oco WITH(NOLOCK)
-	CROSS APPLY(SELECT (fat.fator_detalhe_fator + '  ')
+	CROSS APPLY(SELECT (fat.fator_detalhe_fato + '  ')
 		FROM ftc fat WITH(NOLOCK)
 		WHERE oco.codigo_ocorrencia = fat.codigo_ocorrencia
 			AND oco.ocorrencia_classificacao = 'Acidente' 
-			AND fat.fator_detalhe_fator <> ' '
+			AND fat.fator_detalhe_fato <> ' '
 		FOR XML PATH('')
 	) de (detalhes)
 	WHERE detalhes IS NOT NULL
-
-	 
-SELECT	fat.fator_detalhe_fator,
-		COUNT(fat.fator_detalhe_fator) AS QuantidadeDetalhe
-	FROM ftc fat WITH(NOLOCK)
-	INNER JOIN oco WITH(NOLOCK)
-		ON oco.codigo_ocorrencia = fat.codigo_ocorrencia
-	WHERE oco.ocorrencia_classificacao = 'Acidente' AND fat.fator_detalhe_fator <> ' '
-	GROUP BY fat.fator_detalhe_fator
-	ORDER BY QuantidadeDetalhe
 
 -- Quantidade por fabricante
 SELECT aer.aeronave_fabricante, 
