@@ -1,3 +1,4 @@
+-- ex entregue
 SELECT	cliente.IdCliente,
 		cliente.NomeCliente,
 		pri.PrimeiraDataVenda,
@@ -13,9 +14,9 @@ SELECT	cliente.IdCliente,
 		
 
 CROSS APPLY( SELECT	TOP(1)
-					ve.DataVenda AS PrimeiraDataVenda,
-					SUM(vi.Quantidade) as QuantidadeItem,
-					SUM(vi.Quantidade * pr.ValorVenda) as ValorTotal
+					MIN(ve.DataVenda) AS PrimeiraDataVenda,
+					vi.Quantidade as QuantidadeItem,
+					(vi.Quantidade * pr.ValorVenda) as ValorTotal
 				FROM Venda ve WITH(NOLOCK)
 				inner join Cliente cl
 					on ve.IdCliente = cl.IdCliente
@@ -31,7 +32,7 @@ CROSS APPLY( SELECT	TOP(1)
 			)pri
 
 CROSS APPLY( SELECT	TOP(1)
-				MAX(ve.DataVenda) AS UltimaDataVenda,
+					MAX(ve.DataVenda) AS UltimaDataVenda,
 					vi.Quantidade as QuantidadeItem,
 					(vi.Quantidade * pr.ValorVenda) as ValorTotal
 				FROM Venda ve WITH(NOLOCK)
@@ -43,11 +44,11 @@ CROSS APPLY( SELECT	TOP(1)
 					ON vi.IdProduto = pr.IdProduto
 				
 			WHERE ve.IdCliente = cliente.IdCliente
-				GROUP BY vi.Quantidade, vi.Quantidade, pr.ValorVenda
+				GROUP BY ve.DataVenda, vi.Quantidade, vi.Quantidade, pr.ValorVenda
 				order by UltimaDataVenda DESC
 			)ul
 
-	group by		cliente.IdCliente,
+	group by	cliente.IdCliente,
 				cliente.NomeCliente,
 				pri.PrimeiraDataVenda,
 				pri.QuantidadeItem,
@@ -56,3 +57,60 @@ CROSS APPLY( SELECT	TOP(1)
 				ul.QuantidadeItem,
 				ul.ValorTotal
 	order by cliente.IdCliente
+
+-- forma correta
+SELECT	cl.IdCliente,
+		cl.NomeCliente,
+		pri.PrimeiraDataVenda,
+		pri.QuantidadeItem,
+		pri.ValorTotal,
+		ul.UltimaDataVenda,
+		ul.QuantidadeItem,
+		ul.ValorTotal
+	FROM cliente cl WITH(NOLOCK)
+		
+
+CROSS APPLY( SELECT	TOP(1)
+					ve.DataVenda AS PrimeiraDataVenda,
+					SUM(vi.Quantidade) as QuantidadeItem,
+					SUM(vi.Quantidade * pr.ValorVenda) as ValorTotal
+				FROM Venda ve WITH(NOLOCK)
+				inner join Cliente cl
+					on ve.IdCliente = cl.IdCliente
+				INNER JOIN VendaItem vi WITH(NOLOCK)
+					ON ve.IdVenda = vi.IdVenda
+				INNER JOIN Produto pr WITH(NOLOCK)
+					ON vi.IdProduto = pr.IdProduto
+				
+			WHERE ve.IdCliente = cl.IdCliente
+				GROUP BY ve.DataVenda, vi.Quantidade, vi.Quantidade, pr.ValorVenda
+				order by PrimeiraDataVenda
+				
+			)pri
+
+CROSS APPLY( SELECT	TOP(1)
+					ve.DataVenda AS UltimaDataVenda,
+					SUM(vi.Quantidade) as QuantidadeItem,
+					SUM(vi.Quantidade * pr.ValorVenda) as ValorTotal
+				FROM Venda ve WITH(NOLOCK)
+				inner join Cliente cl
+					on ve.IdCliente = cl.IdCliente
+				INNER JOIN VendaItem vi WITH(NOLOCK)
+					ON ve.IdVenda = vi.IdVenda
+				INNER JOIN Produto pr WITH(NOLOCK)
+					ON vi.IdProduto = pr.IdProduto
+				
+				WHERE ve.IdCliente = cl.IdCliente
+				GROUP BY ve.DataVenda, vi.Quantidade, vi.Quantidade, pr.ValorVenda
+				order by UltimaDataVenda DESC
+			)ul
+
+	group by	cl.IdCliente,
+				cl.NomeCliente,
+				pri.PrimeiraDataVenda,
+				pri.QuantidadeItem,
+				pri.ValorTotal,
+				ul.UltimaDataVenda,
+				ul.QuantidadeItem,
+				ul.ValorTotal
+	order by cl.IdCliente

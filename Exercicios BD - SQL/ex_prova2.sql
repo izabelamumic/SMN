@@ -1,4 +1,4 @@
-
+-- ex entregue
 CREATE TABLE #tbMaiorAux(
 	num INT,
 	id INT, 
@@ -117,3 +117,59 @@ SELECT	tbMa.id AS Id_Cliente, tbMa.nome as Nome_Clide,
 	FROM #tbMaior tbMa
 	INNER JOIN #tbMenor tbMe
 		ON tbMa.id = tbMe.id
+
+
+-- outra forma de fazer
+SELECT	cli.IdCliente, 
+		cli.NomeCliente,
+		menor.PrimeiraDataVenda,
+		menor.QuantidadeItem,
+		menor.ValorTotal,
+		maior.UltimaDataVenda,
+		maior.QuantidadeItem,
+		maior.ValorTotal
+	FROM Cliente cli WITH(NOLOCK)
+
+CROSS APPLY(SELECT TOP(1)
+					ve.DataVenda AS PrimeiraDataVenda,
+					SUM(vi.Quantidade) as QuantidadeItem,
+					SUM(vi.Quantidade * pr.ValorVenda) as ValorTotal
+				FROM Venda ve WITH(NOLOCK)
+				inner join Cliente cl
+					on ve.IdCliente = cl.IdCliente
+				INNER JOIN VendaItem vi WITH(NOLOCK)
+					ON ve.IdVenda = vi.IdVenda
+				INNER JOIN Produto pr WITH(NOLOCK)
+					ON vi.IdProduto = pr.IdProduto
+				
+				WHERE ve.IdCliente = cli.IdCliente
+				GROUP BY ve.DataVenda
+				ORDER BY ValorTotal
+			)menor
+
+CROSS APPLY(SELECT	TOP(1)
+					ve.DataVenda AS UltimaDataVenda,
+					SUM(vi.Quantidade) as QuantidadeItem,
+					SUM(vi.Quantidade * pr.ValorVenda) as ValorTotal
+				FROM Venda ve WITH(NOLOCK)
+				inner join Cliente cl
+					on ve.IdCliente = cl.IdCliente
+				INNER JOIN VendaItem vi WITH(NOLOCK)
+					ON ve.IdVenda = vi.IdVenda
+				INNER JOIN Produto pr WITH(NOLOCK)
+					ON vi.IdProduto = pr.IdProduto
+				
+				WHERE ve.IdCliente = cli.IdCliente
+				GROUP BY ve.DataVenda
+				ORDER BY ValorTotal DESC
+			)maior
+	
+	group by	cli.IdCliente,
+				cli.NomeCliente,
+				menor.PrimeiraDataVenda,
+				menor.QuantidadeItem,
+				menor.ValorTotal,
+				maior.UltimaDataVenda,
+				maior.QuantidadeItem,
+				maior.ValorTotal
+	order by cli.IdCliente
