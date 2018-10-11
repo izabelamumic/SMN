@@ -13,9 +13,9 @@ SELECT	cliente.IdCliente,
 		
 
 CROSS APPLY( SELECT	TOP(1)
-					MIN(ve.DataVenda) AS PrimeiraDataVenda,
-					vi.Quantidade as QuantidadeItem,
-					(vi.Quantidade * pr.ValorVenda) as ValorTotal
+					ve.DataVenda AS PrimeiraDataVenda,
+					SUM(vi.Quantidade) as QuantidadeItem,
+					SUM(vi.Quantidade * pr.ValorVenda) as ValorTotal
 				FROM Venda ve WITH(NOLOCK)
 				inner join Cliente cl
 					on ve.IdCliente = cl.IdCliente
