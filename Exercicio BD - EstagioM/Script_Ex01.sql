@@ -10,8 +10,8 @@
 SELECT	(CONVERT(VARCHAR(50), lt.Num_Empr) + ' - ' + lt.Cod_Quadra + ' - ' + CONVERT(VARCHAR(50), lt.Cod_Lot)) AS eql,
 		cl.Num_CliCPFCNPJ,
 		cl.Nom_Cli,
-		ct.Dat_Venda,
-		ct.Dat_ConfirmaVenda,
+		datepart(YEAR,ct.Dat_Venda) as DatVenda,
+		datepart(YEAR,ct.Dat_ConfirmaVenda) as DatConf,
 		st.Nom_StatusContVend
 	FROM GKSLT_Contratos ct WITH(NOLOCK)
 	INNER JOIN GKSLT_Clientes cl WITH(NOLOCK)
@@ -20,4 +20,6 @@ SELECT	(CONVERT(VARCHAR(50), lt.Num_Empr) + ' - ' + lt.Cod_Quadra + ' - ' + CONV
 		ON ct.Num_ChavLot = lt.Num_ChavLot
 	INNER JOIN GKSLT_StatusContVend st WITH(NOLOCK)
 		ON ct.Cod_StatusContVend = st.Cod_StatusContVend
-	WHERE YEAR(ct.Dat_Venda) >= 2010 AND st.Cod_StatusContVend <> 1
+	WHERE	ct.Dat_Venda >= '2010-01-01'
+	-- 2 = Contrato ativo, 3 = Contrato Inativo, 4 = Contrato rescindido
+			AND (st.Cod_StatusContVend = 2 OR st.Cod_StatusContVend = 3 OR st.Cod_StatusContVend = 4)

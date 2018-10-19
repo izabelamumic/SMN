@@ -1,0 +1,17 @@
+EQL - Empreendimento - Quadra - Lote
+Sempre concatenar estes dados para mostrar pro cliente
+
+mostrar contrato:
+ -  eql
+ - cpf
+ - nome
+
+REGRAS DE NEGOCIO
+- Vendas não pagas: cod_tipbaipar is null (tabela parcelas)
+- vendas pagas: ind_baiefet = 'S' and dat_pagto is not null (tabela parcelas)
+- Contratos Ativos: cod_statuscontvend = 2
+(tabela = contratos)
+
+Pegar apenas a data de um campo datetime:
+cast(pc.Dat_Venc as date)
+

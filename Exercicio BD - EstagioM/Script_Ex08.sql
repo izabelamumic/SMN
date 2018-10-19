@@ -23,8 +23,8 @@ with cte as (SELECT (CONVERT(VARCHAR(50), lt.Num_Empr) + '-' + lt.Cod_Quadra + '
 			INNER JOIN GKSLT_StatusContVend sct
 				ON ct.Cod_StatusContVend = sct.Cod_StatusContVend
 			WHERE pc.Cod_TipBaiPar IS NULL
-					AND ct.Dat_Venda >= '2008-01-01'
-					AND ct.Dat_Venda <= '2008-31-12'
+					AND ct.Dat_Venda >= '2008-01-01 00:00:00'
+					AND ct.Dat_Venda <= '2008-31-12 23:59:59'
 					AND (sct.Cod_StatusContVend = 2 OR sct.Cod_StatusContVend = 3 OR sct.Cod_StatusContVend = 4)
 			GROUP BY 	(CONVERT(VARCHAR(50), lt.Num_Empr) + '-' + lt.Cod_Quadra + '-' + CONVERT(VARCHAR(50), lt.Cod_Lot)),
 						cl.Nom_Cli,
@@ -51,8 +51,8 @@ cte2 as (SELECT cl.Num_CliCPFCNPJ,
 					WHERE cl.Num_CliCPFCNPJ = cl1.Num_CliCPFCNPJ							
 				)antiga
 
-		WHERE	ct.Dat_Venda >= '2008-01-01'
-				AND ct.Dat_Venda <= '2008-31-12'
+		WHERE	ct.Dat_Venda >=	'2008-01-01 00:00:00'
+				AND ct.Dat_Venda <= '2008-31-12 23:59:59'
 		)
 
 SELECT	cte.Eql,
